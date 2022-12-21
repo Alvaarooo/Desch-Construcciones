@@ -365,14 +365,10 @@ figure .trasera p {
 .footer{
     height: 160px;
     background-color: #e2e2e2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .footer__logo{
     margin-left: 10px;
-    text-align: center;
 }
 
 .footer__logo img{
