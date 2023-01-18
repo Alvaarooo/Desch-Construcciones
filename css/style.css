@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300&family=Fredoka+One&family=Staatliches&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +6,6 @@
 }
 
 body{
-    font-family: 'Roboto' ,sans-serif;
     background-color: #cfcdcd;
 }
 
@@ -19,23 +19,39 @@ a{
     color: #000;
     font-size: 1em;
 }
+h1{
+    font-family: 'Fredoka One', cursiva;
+}
+h2, h3{
+    font-family: 'Staatliches', cursiva;
+}
+p{
+    font-family: 'Staatliches', cursiva;
+}
 /*estilos generales*/
 
 
 /*header*/
+header nav .container-fluid{
+    background-color:#ebe6e6 ;
+}
 
 nav{
     height: 70px;
     background-color:#ebe6e6 ;
+
 }
 .logo{
     font-weight: 700;
     font-size: 1.5em;
 }
+header nav .container-fluid{
+    font-family: 'Staatliches', cursiva;
+}
 .nav-link{
     position: relative;
     font-weight: 550;
-    font-size: 1em;
+    font-size: 1.3em;
     color: black;
 }
 .nav-link:after{
@@ -55,36 +71,55 @@ nav{
 
 /*header*/
 #hero{
-    background-image: linear-gradient(
-        0deg,
-        rgba(54, 49, 49, 0.3),
-        rgba(54, 49, 49, 0.3)
-     )
-    ,url(../media/header/header-4380x2923.jpg);
+    background-image:url(../media/header/header-4380x2923.jpg);
     height: 80vh;
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+#hero::before{
+    content: '';
+    background-color:rgba(0,0,0, .6);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
 }
 
 #hero h1{
     color: #f8eed9;
+    font-family:'Fredoka One' , cursiva;
+    font-size: 2em;
 }
 #hero a{
     color: #dbcdb1;
+    font-family: 'Fredoka One' , cursiva;
+    font-size: 1.6em;
+}
+#hero a:hover{
+    text-decoration: underline;
 }
 
 .nosotros__empleados{
-    background-image: linear-gradient(
-        0deg,
-        rgba(54, 49, 49, 0.3),
-        rgba(54, 49, 49, 0.3)
-     )
-    ,url(../media/sobrenosotros/bg.jpg);
-    height: 55vh;
+    background-image:url(../media/sobrenosotros/bg.jpg);
+    height: 75vh;
+    position: relative;
     background-position: center;
     background-size: cover;
-    opacity: 1;
+    background-repeat: no-repeat;
 }
+
+.nosotros__empleados::before{
+    content: '';
+    background-color:rgba(0,0,0, .6);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
+
 .nosotros__empleados p{
     color:#dbcdb1;
 }
@@ -92,19 +127,12 @@ nav{
     color: #f8eed9;
 }
 
-.nosotros__img img{
-    width: 350px;
-    height: 300px;
-    margin-top: 200px;
-}
 
 .nosotros__empresa{
     background-color: #A69C94;
-    margin-top: 200px;
-    padding: 8em 0;
-}
-.nosotros__txt{
-    width: 60%;
+    margin-top: 100px;
+    padding: 2em 0;
+    border-radius: 20px;
 }
 .nosotros__logo img{
     width: 200px;
@@ -130,12 +158,14 @@ figure{
 	height: 400px;
 	transition: all ease .5s;
 	transform-style: preserve-3d;
+    border-radius: 20px;
 }
 figure .frontal,
 figure .trasera {
 	width: 100%;
 	height: 100%;
 	transition: all ease .5s;
+    border-radius: 20px;
 }
 
 figure .frontal {
@@ -164,7 +194,7 @@ figure .trasera {
 
 figure .trasera .titulo {
 	color: #fff;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Staatliches', cursiva;
 }
 
 figure .trasera hr {
@@ -175,58 +205,125 @@ figure .trasera hr {
 }
 
 figure .trasera p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Staatliches', cursiva;
 	line-height: 22px;
 }
 
 .ubicacion{
     background-color: #A69C94;
+    border-radius: 20px;
 }
-.ubicacion iframe{
-    width: 50%;
-}
-.ubicacion__txt{
-    width: 70%;
-}
-/* como trabajamos */
-.cont{
-    max-width: 1200px; 
+iframe{
+    border-radius: 20px;
 }
 
-.cont__h1{
-    width: 100%;
-    height: 80px;
+/* como trabajamos */
+.cont{
+    max-width: 1200px;
 }
 
 .cont .carta img{
     width: 600px;
     height: 500px;
+    border-radius: 15px;
 }
 
+.carta{
+    background-color: #b1a398;
+    padding: 2em;
+    box-shadow: 7px 13px 37px #000;
+    border-radius: 15px;
+}
+
+.cont__final{
+    box-shadow: 3px 9px 9px #000;
+    padding: 1em;
+    background-color: #e4d7d7;
+    border-radius: 15px;
+}
 /* como trabajamos*/
 
 /*proyectos*/
-.galeria{
-    max-width: 1500px;
+.proyectos-container{
+    margin-bottom: 20px;
+}
+.img__container{
+    width: 350px;
+    height: 350px;
+    margin: 5px;
+    padding:0;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scale(.4);
+    opacity: 0;
+    transition: .5s;
 }
 
-.img__container{
-    min-width: 350px;
-    max-width: 400px;
-    min-height: 300px;
-    max-height: 400px;
-    margin: 5px;
+.img__container:hover .img__overlay{
+    opacity: 1;
+    transform: scale(1);
+    cursor: pointer;
 }
+
 .img__container img{
     width: 100%;
     height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
 }
 /*proyectos*/
 
 /*empleo*/
-.body{
-    min-height: 95vh;
-    max-width: 1200px;
+.empleo__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100%;
+    position: relative;
+    background-image: url(../media/empleo/bkg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+} 
+.empleo__container::before{
+    content: '';
+    background-color:rgba(0,0,0, .6);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+}  
+.empleo__txt a{
+    color: white;
+}
+.empleo__txt a:hover{
+    text-decoration: underline;
+}
+.empleo__txt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: white;
+    min-width: ;
+    max-width: 50em;
 }
 
 /*empleo*/
@@ -241,17 +338,19 @@ figure .trasera p {
     height: 100vh;
 }
 .comunicate img{
-    width: 5vh;
+    width: 50px;
     margin: 30px;
 }
 .form-register {
     max-width: 350px;
-    background: #24303c;
+    background: #7c7064;
     padding: 30px;
     margin: auto;
     border-radius: 4px;
     color: white;
     box-shadow: 7px 13px 37px #000;
+    font-family: 'Staatliches', cursiva;
+    border-radius: 20px;
   }
   
   .form-register h4 {
@@ -261,13 +360,14 @@ figure .trasera p {
   
   .controls {
     width: 100%;
-    background: #24303c;
+    background:#A69C94;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid #1f53c5;
+    border: 1px solid #000000;
     font-size: 18px;
     color: white;
+    border-radius: 15px;
   }
   
   .form-register p {
@@ -275,21 +375,17 @@ figure .trasera p {
     text-align: center;
     line-height: 40px;
   }
-  
-  .form-register a {
-    color: white;
-    text-decoration: none;
-  }
 
   
   .form-register .botons {
     width: 100%;
-    background: #1f53c5;
+    background: #A69C94;
     border: none;
     padding: 12px;
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 16px 0;
     font-size: 1em;
+    border-radius: 15px;
   }
 
 /*contacto*/
@@ -320,5 +416,40 @@ figure .trasera p {
 	}
     .cont .carta img{
         height: 300px;
+    }
+
+    .img__container .img__overlay{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #hero{
+        height: 60vh;
+    }
+    #hero h1{
+        font-size: 1.3em;
+    }
+    #hero a{
+        font-size: 1.2em;
+    }
+    .nosotros__empleados{
+        height: 50vh;
+    }
+    figure{
+        width: 300px;
+        height: 350px;
+    }
+    .nosotros__logo img{
+        width: 150px;
+    }
+    .img__container{
+        width: 300px;
+        height: 270px;
+    }
+    .form-register{
+        margin: 0 10px;
     }
 }
