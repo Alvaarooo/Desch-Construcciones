@@ -1,0 +1,13 @@
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    background-color: $Main-color;
+    border-radius: $Main-border;
+    &__txt{
+        display: flex;
+        flex-direction: column;
+        }
+    iframe{
+        border-radius: $Main-border;
+    }
+}

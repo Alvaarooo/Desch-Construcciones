@@ -1,0 +1,33 @@
+.empleo__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100%;
+    position: relative;
+    background-image: url(../media/empleo/bkg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    &::before{
+        content:'';
+        background-color:$Overlay-color;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+    }
+    .empleo__txt{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: white;
+        max-width: 50em;
+        a{
+            color: white;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+footer{
+    height: 160px;
+    background-color: $Nav-color;
+    .footer__logo{
+        img{
+            width: 100px;
+        }
+    }
+    .footer__contacto{
+        img{
+            width: 30px;
+        }
+    }
+}

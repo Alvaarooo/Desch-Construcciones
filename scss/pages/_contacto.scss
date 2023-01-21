@@ -1,0 +1,61 @@
+.margen{
+    margin: 0 10px;
+    margin-top: 50px;
+}
+
+.contacto{
+    max-width: 1000px;
+    height: 100vh;
+    .comunicate{
+        img{
+            width: 50px;
+            margin: 30px;
+        }
+    }
+}
+
+.form-register{
+    max-width: 350px;
+    background: #7c7064;
+    padding: 30px;
+    margin: auto;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    font-family: 'Staatliches', cursiva;
+    border-radius: $Main-border;
+    .controls{
+        width: 100%;
+        background:#A69C94;
+        padding: 10px;
+        margin-bottom: $Main-border;
+        border: 1px solid #000000;
+        font-size: $Main-border;
+        color: white;
+        border-radius: $Main-border;
+    }
+    .botons{
+        width: 100%;
+        background: #A69C94;
+        border: none;
+        padding: 12px;
+        color: rgb(255, 255, 255);
+        margin: 16px 0;
+        font-size: 1em;
+        border-radius: $Main-border;
+    }
+    h4{
+        font-size: 1.5em;
+        margin-bottom: $Main-border;
+    }
+    p{
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .form-register{
+        margin: 0 10px;
+    }
+}

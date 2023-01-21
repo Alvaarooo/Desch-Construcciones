@@ -1,0 +1,59 @@
+.proyectos-container{
+    margin-bottom: $Main-border;
+    .container{
+        .img__container{
+            width: 350px;
+            height: 350px;
+            margin: 5px;
+            padding:0;
+            position: relative;
+            border-radius: $Main-border;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover .img__overlay{
+                opacity: 1;
+                transform: scale(1);
+                cursor: pointer;
+            }
+
+            .img__overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: $Overlay-color;
+                color: #fff;
+                border-radius: $Main-border;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transform: scale(.4);
+                opacity: 0;
+                transition: .5s;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: $Main-border;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    .proyectos-container .container .img__container .img__overlay{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 576px){
+    .img__container{
+        width: 300px;
+        height: 270px;
+    }
+}
