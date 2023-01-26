@@ -9,6 +9,10 @@
             width: 600px;
             height: 500px;
             border-radius: $Main-border;
+            @include pc () {
+                height: 300px;
+                width: 420px;
+            }
         }
     }
     &__final{
@@ -16,11 +20,5 @@
         padding: 1em;
         background-color: #e4d7d7;
         border-radius: $Main-border;
-    }
-}
-
-@media screen and (max-width: 992px){
-    .cont .carta img{
-        height: 300px;
     }
 }

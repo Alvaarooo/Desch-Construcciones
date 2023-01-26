@@ -1,0 +1,19 @@
+@mixin overlay{
+    content:'';
+    background-color:$Overlay-color;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
+@mixin tablet {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+@mixin pc {
+    @media (max-width: 992px) {
+        @content;
+    }
+}

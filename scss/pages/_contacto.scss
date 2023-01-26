@@ -23,6 +23,9 @@
     box-shadow: 7px 13px 37px #000;
     font-family: 'Staatliches', cursiva;
     border-radius: $Main-border;
+    @include pc () {
+        margin: 0 10px;
+    }
     .controls{
         width: 100%;
         background:#A69C94;
@@ -51,11 +54,5 @@
         height: 40px;
         text-align: center;
         line-height: 40px;
-    }
-}
-
-@media screen and (max-width: 576px){
-    .form-register{
-        margin: 0 10px;
     }
 }

@@ -11,6 +11,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @include tablet () {
+                width: 300px;
+                height: 270px;
+            }
             &:hover .img__overlay{
                 opacity: 1;
                 transform: scale(1);
@@ -33,6 +37,10 @@
                 transform: scale(.4);
                 opacity: 0;
                 transition: .5s;
+                @include pc () {
+                    opacity: 1;
+                    transform: scale(1);
+                }
             }
             img{
                 width: 100%;
@@ -41,19 +49,5 @@
                 object-fit: cover;
             }
         }
-    }
-}
-
-@media screen and (max-width: 992px){
-    .proyectos-container .container .img__container .img__overlay{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@media screen and (max-width: 576px){
-    .img__container{
-        width: 300px;
-        height: 270px;
     }
 }

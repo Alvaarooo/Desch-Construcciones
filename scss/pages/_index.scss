@@ -1,21 +1,21 @@
 #hero{
-    background-image: url(../../media/header/header-1920x1281.jpg);
+    background-image: url(../media/header/header-1920x1281.jpg);
     height: 80vh;
     background-size: cover;
     background-position: center;
     position: relative;
+    @include tablet () {
+        height: 60vh
+    }
     &::before{
-        content: '';
-        background-color: $Overlay-color;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        position: absolute;
+        @include overlay();
     }
     h1{
         color:$Text-color;
         font-size: 2em;
+        @include tablet () {
+            font-size: 1.3em
+        }
     }
     a{
         color: $Text-color;
@@ -24,25 +24,20 @@
         &:hover{
             text-decoration: underline;
         }
+        @include tablet () {
+            font-size: 1.2em
+        }
     }
 
 }
 
 .nosotros__empleados{
+    @extend #hero ;
     background-image:url(../media/sobrenosotros/bg.jpg);
-    height: 75vh;
-    position: relative;
-    background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
-    &::before{
-        content: '';
-        background-color: $Overlay-color;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        position: absolute;
+    @include tablet () {
+        height: max-content;
+        padding: 1em;
     }
     p{
         color:$Text-color;
@@ -73,6 +68,9 @@
                  img{
                     filter:blur(2px);
                  }
+                 @include pc () {
+                    transform: perspective(600px) rotateY(0deg);
+                 }
             }
         }
         figure{
@@ -81,6 +79,10 @@
             transition: all ease .5s;
             transform-style: preserve-3d;
             border-radius: $Main-border;
+            @include tablet () {
+                width: 300px;
+                height: 350px;
+            }
              .frontal,
              .trasera{
                 width: 100%;
@@ -106,6 +108,10 @@
                 background: -ms-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
                 background: linear-gradient(to bottom, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbe8ca', endColorstr='#192c48', GradientType=0 );
+                @include pc () {
+                    backface-visibility:visible;
+		            transform: perspective(600px) rotateY(0deg);
+                }
             }
                 .titulo{
                     color: #fff;
@@ -120,36 +126,5 @@
                     line-height: 22px;
                 }
         }
-    }
-}
-
-@media screen and (max-width: 992px){
-    #proyectos .proyectos__tarjeta figure .trasera {
-		backface-visibility:visible;
-		transform: perspective(600px) rotateY(0deg);
-	}
-
-	#proyectos .proyectos__tarjeta:hover figure {
-		transform: perspective(600px) rotateY(0deg);	
-	} 
-}
-
-@media screen and (max-width: 576px){
-    #hero{
-        height: 60vh;
-    }
-    #hero h1{
-        font-size: 1.3em;
-    }
-    #hero a{
-        font-size: 1.2em;
-    }
-    .nosotros__empleados{
-        height: max-content;
-        padding: 1em;
-    }
-    #proyectos .proyectos__tarjeta figure{
-        width: 300px;
-        height: 350px;
     }
 }
