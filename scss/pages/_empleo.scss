@@ -1,4 +1,4 @@
-.empleo__container{
+.empleo{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,19 +8,36 @@
     background-image: url(../media/empleo/bkg.png);
     background-repeat: no-repeat;
     background-position: center;
-    &::before{
-        @include overlay();
-    }
-    .empleo__txt{
+    &__txt{
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         color: white;
         max-width: 50em;
+        &::before{
+            @include overlay();
+        }
         a{
             color: white;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
             &:hover{
                 text-decoration: underline;
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            &:focus{
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            &:active{
+                -webkit-transform: scale(1.1);
+                 transform: scale(1.1);
             }
         }
     }
