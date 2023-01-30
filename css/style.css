@@ -70,6 +70,11 @@ header nav .container-fluid #navbarNav ul li .nav-link:hover:after {
   background-color: #A69C94;
   border-radius: 20px;
 }
+@media (max-width: 992px) {
+  .ubicacion {
+    align-items: center;
+  }
+}
 .ubicacion__txt {
   display: flex;
   flex-direction: column;
@@ -221,10 +226,10 @@ footer .footer__contacto img {
 }
 #proyectos .proyectos__tarjeta figure .trasera {
   top: 0;
-  color: #fff;
+  color: rgb(255, 255, 255);
   transform: perspective(600px) rotateY(180deg);
   backface-visibility: hidden;
-  overflow: auto;
+  overflow: visible;
   background: rgba(251, 232, 202, 0.7);
   background: -moz-linear-gradient(top, rgba(251, 232, 202, 0.7) 0%, rgb(25, 44, 72) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251, 232, 202, 0.7)), color-stop(100%, rgb(25, 44, 72)));
@@ -276,7 +281,7 @@ footer .footer__contacto img {
 .cont__final {
   box-shadow: 3px 9px 9px #000;
   padding: 1em;
-  background-color: #e4d7d7;
+  background-color: #bdaea0;
   border-radius: 20px;
 }
 
@@ -293,6 +298,9 @@ footer .footer__contacto img {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: -12px 9px 15px -5px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: -12px 9px 15px -5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: -12px 9px 15px -5px rgba(0, 0, 0, 0.6);
 }
 @media (max-width: 576px) {
   .galeria__img .img__container {
@@ -346,14 +354,7 @@ footer .footer__contacto img {
   background-repeat: no-repeat;
   background-position: center;
 }
-.empleo__txt {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  color: white;
-  max-width: 50em;
-}
-.empleo__txt::before {
+.empleo::before {
   content: "";
   background-color: rgba(0, 0, 0, 0.6);
   top: 0;
@@ -361,6 +362,25 @@ footer .footer__contacto img {
   right: 0;
   left: 0;
   position: absolute;
+}
+.empleo__txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: white;
+  max-width: 50em;
+  position: relative;
+}
+@media (max-width: 576px) {
+  .empleo__txt {
+    align-items: center;
+  }
+}
+.empleo__txt h1 {
+  color: #f8eed9;
+}
+.empleo__txt h2 {
+  color: #f8eed9;
 }
 .empleo__txt a {
   color: white;
@@ -376,14 +396,19 @@ footer .footer__contacto img {
   text-decoration: underline;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  color: #f8eed9;
 }
 .empleo__txt a:focus {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  color: #f8eed9;
+  text-decoration: underline;
 }
 .empleo__txt a:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  color: #f8eed9;
+  text-decoration: underline;
 }
 
 .margen {

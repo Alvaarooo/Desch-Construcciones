@@ -8,14 +8,24 @@
     background-image: url(../media/empleo/bkg.png);
     background-repeat: no-repeat;
     background-position: center;
+    &::before{
+        @include overlay();
+    }
     &__txt{
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         color: white;
         max-width: 50em;
-        &::before{
-            @include overlay();
+        position: relative;
+        @include tablet () {
+            align-items: center;
+        }
+        h1{
+            color: $Text-color;
+        }
+        h2{
+            color: $Text-color;
         }
         a{
             color: white;
@@ -30,14 +40,19 @@
                 text-decoration: underline;
                 -webkit-transform: scale(1.1);
                 transform: scale(1.1);
+                color: $Text-color;
             }
             &:focus{
                 -webkit-transform: scale(1.1);
                 transform: scale(1.1);
+                color: $Text-color;
+                text-decoration: underline;
             }
             &:active{
                 -webkit-transform: scale(1.1);
                  transform: scale(1.1);
+                 color: $Text-color;
+                 text-decoration: underline;
             }
         }
     }

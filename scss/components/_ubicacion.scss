@@ -3,6 +3,9 @@
     flex-direction: column;
     background-color: $Main-color;
     border-radius: $Main-border;
+    @include pc (){
+        align-items:center;
+    }
     &__txt{
         display: flex;
         flex-direction: column;
