@@ -23,11 +23,7 @@ h1 {
   font-family: "Fredoka One", cursiva;
 }
 
-h2, h3, h4 {
-  font-family: "Staatliches", cursiva;
-}
-
-p {
+h2, h3, h4, p, i {
   font-family: "Staatliches", cursiva;
 }
 
@@ -432,16 +428,16 @@ footer .footer__contacto img {
   transition-property: transform;
 }
 .contacto .comunicate__icon:hover {
-  -webkit-transform: scale(2);
-  transform: scale(2);
+  -webkit-transform: scale(1.7);
+  transform: scale(1.7);
 }
 .contacto .comunicate__icon:focus {
-  -webkit-transform: scale(2);
-  transform: scale(2);
+  -webkit-transform: scale(1.7);
+  transform: scale(1.7);
 }
 .contacto .comunicate__icon:active {
-  -webkit-transform: scale(2);
-  transform: scale(2);
+  -webkit-transform: scale(1.7);
+  transform: scale(1.7);
 }
 .contacto .comunicate img {
   width: 50px;
